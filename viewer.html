@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Viewer | Kids Workbook Library</title>
+  <meta name="description" content="View and print free educational workbooks for kids with an interactive flip-book reader. Easy page-by-page printing for parents and teachers.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Book Viewer | Kids Workbook Library">
+  <meta property="og:description" content="View and print free educational workbooks with an interactive flip-book reader.">
+  <meta property="og:site_name" content="Kids Workbook Library">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Book Viewer | Kids Workbook Library">
+  <meta name="twitter:description" content="View and print free educational workbooks with an interactive flip-book reader.">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="viewer-header" aria-label="Book navigation">
+    <a href="index.html" class="back-link" aria-label="Back to library">&larr; Back</a>
+    <h1 class="book-title" id="book-title">Loading...</h1>
+    <span class="page-info" id="page-info" aria-live="polite"></span>
+  </nav>
+
+  <main class="viewer-body">
+    <div id="flipbook-container" role="document" aria-label="Book pages"></div>
+  </main>
+
+  <div class="viewer-controls" role="toolbar" aria-label="Book controls">
+    <button class="ctrl-btn ctrl-prev" id="btn-prev" disabled aria-label="Previous page">&larr; Prev</button>
+    <button class="ctrl-btn ctrl-next" id="btn-next" aria-label="Next page">Next &rarr;</button>
+    <button class="ctrl-btn ctrl-print" id="btn-print-page" aria-label="Print current page">Print Page</button>
+    <button class="ctrl-btn ctrl-print" id="btn-print-all" aria-label="Print all pages">Print All</button>
+    <button class="ctrl-btn ctrl-download" id="btn-download" aria-label="Download PDF">Download PDF</button>
+  </div>
+
+  <div class="loading-overlay" id="loading">
+    <div class="spinner"></div>
+    <p>Loading workbook...</p>
+    <span class="progress-text" id="load-progress">Preparing...</span>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+  <script src="js/books-data.js"></script>
+  <script src="js/viewer.js"></script>
+</body>
+</html>
