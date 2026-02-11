@@ -8,8 +8,23 @@ const BOOKS_DATA = {
       books: [
         {
           id: "K-book1",
-          title: "Workbook - Book 1",
+          title: "Workbook",
           pdfUrl: "K-book1.pdf",
+        },
+        {
+          id: "k-tracing-letter",
+          title: "Tracing Letters",
+          pdfUrl: "k-tracing-letter.pdf",
+        },
+        {
+          id: "k-tracing-number",
+          title: "Tracing Numbers",
+          pdfUrl: "k-tracing-number.pdf",
+        },
+        {
+          id: "k-addition-10",
+          title: "Addition",
+          pdfUrl: "k-addition-10.pdf",
         },
       ],
     },

@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("testing");
   const grid = document.getElementById("grades-grid");
 
   BOOKS_DATA.grades.forEach((grade) => {
+    
     const card = document.createElement("div");
     card.className = "grade-card";
     card.setAttribute("role", "listitem");
-
+    console.log(grade);
     const hasBooks = grade.books.length > 0;
+    
 
     let booksHtml = "";
     if (hasBooks) {
